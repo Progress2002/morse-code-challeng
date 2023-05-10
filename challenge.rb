@@ -8,3 +8,10 @@ def decode_character(str)
   }
   hash.each { |key, value| return value.to_s if key == str }
 end
+
+def decode_word(word)
+  splitted_word = word.split
+  output = []
+  splitted_word.each { |i| output.push(decode_character(i)) }
+  output.join
+end

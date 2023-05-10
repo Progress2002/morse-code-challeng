@@ -15,3 +15,10 @@ def decode_word(word)
   splitted_word.each { |i| output.push(decode_character(i)) }
   output.join
 end
+
+def decode_message(phrase)
+  splitted_phrase = phrase.split('   ')
+  output = []
+  splitted_phrase.each { |i| output.push(decode_word(i)) }
+  output.join(' ')
+end
